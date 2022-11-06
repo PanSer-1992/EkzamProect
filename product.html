@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Карточка товара</title>
+        
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="./images/tikv.png"></a>
+            </div>
+            <section class="container">
+                <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span></span></div>
+            </section>
+            <section class="container">
+                <form class="search">
+                    <input type="text" placeholder="Искать здесь...">
+                    <button type="submit"></button>
+                </form>
+                <button class="LK">Личный кабинет</button>
+                <button class="korzina"><a href="order.html">Корзина</a></button>
+            </section>
+            <section class="container">
+                <nav class="topmenu">
+                    <a href="index.html"><span>Главная страница</span></a>
+                    <a href="catalog.html"><span>Каталог</span></a>
+                    <a href="product.html"><span>Товар</span></a>
+                    <!-- <a href="order.html"><span>Корзина</span></a> -->
+                    <a href="contacts.html"><span>Контакты</span></a>
+                </nav>
+            </section>
+        </header>
+        <div class="line"></div>
+        <main>
+            <section class="container">
+                <ul class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="index.html">
+                            <span itemprop="name">Главная страница</span>
+                        </a>
+                        <meta itemprop="position" content="1">
+                        <link itemprop="url" href="index.html">
+                    </li>
+                    
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a href="catalog.html">
+                            <span itemprop="name">Каталог</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                        <link itemprop="url" href="catalog.html">
+                    </li>
+                    
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Товар</span>
+                        <meta itemprop="position" content="3">
+                        <link itemprop="url" href="product.html">
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="container">
+                <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product">
+                    <div class="images">
+                        <div class="bigimage">
+                            <img src="./images/z1Pald8H7PI.jpg" alt="картина-девушка">
+                        </div>
+                        
+                        <div class="gallery">
+                            <div>
+                                <div class="rail">
+                                    <img src="./images/mini_z1Pald8H7PI.jpg" alt="картина-девушка">
+                                    <img src="./images/mini_NB5UDqxHZXg.jpg" alt="картина-девушка2">
+                                    <img src="./images/mini_HYU-Ylrfh-I.jpg" alt="картина-женщина">
+                                    <img src="./images/mini_-bNb6duM0a8.jpg" alt="картина-женщина2">
+                                    <img src="./images/mini_b2bd684a9b.jpg" alt="картина-кисти">
+                                    <img src="./images/mini_z1Pald8H7PI.jpg" alt="картина-девушка">
+                                    <img src="./images/mini_NB5UDqxHZXg.jpg" alt="картина-девушка2">
+                                    <img src="./images/mini_HYU-Ylrfh-I.jpg" alt="картина-женщина">
+                                    <img src="./images/mini_-bNb6duM0a8.jpg" alt="картина-женщина2">
+                                    <img src="./images/mini_b2bd684a9b.jpg" alt="картина-кисти">
+                                    <img src="./images/mini_z1Pald8H7PI.jpg" alt="картина-девушка">
+                                    <img src="./images/mini_NB5UDqxHZXg.jpg" alt="картина-девушка2">
+                                    <img src="./images/mini_HYU-Ylrfh-I.jpg" alt="картина-женщина">
+                                    <img src="./images/mini_-bNb6duM0a8.jpg" alt="картина-женщина2">
+                                    <img src="./images/mini_b2bd684a9b.jpg" alt="картина-кисти">
+                                    
+                                </div>
+                            </div>
+                            <button type="button" class="gal_left disabled"><span>&#8249;</span></button>
+                            <button type="button" class="gal_right"><span>&#8250;</span></button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer">
+                        <h1 itemprop="name">Лот 1</h1>
+                        <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <span itemprop="price">8000</span>
+                            <meta itemprop="priceCurrency" content="RUB">
+                        </p>
+                        <button type="button" class="btn btn-success btn-buy"><a href="order.html"><span>Купить</span></a></button>
+                        <p itemprop="description">Краткие характеристики товара</p>
+                        <p>Краткие характеристики товара</p>
+                        <p>Характеристики товара очень хорошие</p>
+                        <p>Характеристики товара очень хорошие</p>
+                    </div>
+                </div>
+                
+                <div class="tabs">
+                    <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                    <label for="tab-btn-1">Описание</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                    <label for="tab-btn-2">Характеристики</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                    <label for="tab-btn-3">Отзывы</label>
+
+                    <div id="content-1">
+                        Портрет девушки в тёмных тонах, лицо грустное, взгляд задумчивый, небо синее, вода мокрая.<br>
+                        Портрет девушки в тёмных тонах, лицо грустное, взгляд задумчивый, небо синее, вода мокрая.<br>
+                        Портрет девушки в тёмных тонах, лицо грустное, взгляд задумчивый, небо синее, вода мокрая.<br>
+                    </div>
+                    <div id="content-2">
+                        Картина написана масляными красками на оргалите, размером 30/40 сантиметров. Обрамлена деревянной лакированной рамкой из осины.<br>
+                        <hr>
+                        Состав:
+                        <ul class="spisok">
+                                <li>Оргалит</li>
+                                <li>Масляный краски</li>
+                                <li>Старания</li>
+                                <li>Самовыражение</li>
+                                <li>Дерево</li>
+                        </ul>
+                    </div>
+                    <div id="content-3">
+                        Данный раздел в разработке...приносим свои извинения
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="wrap">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/tikv.png"></a>
+                </div>
+                <div class="copyright">
+                    <p>
+                        Сайт авторской живописи © 2015-2023<br>
+                        <a href="contacts.html">AAVart@mail.ru</a>
+                    </p>
+                </div>
+                <ul class="footer-menu">
+                    <li><a>Подписаться на рассылку</a></li></li>
+                    <li><a>Стать спонсором</a></li>
+                    <li><a>Реквизиты</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <li><a>Политика конфиденциальности</a></li>
+                    <li><a>Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

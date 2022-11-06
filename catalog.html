@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Каталог</title>
+        
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script defer src="js/jquery-3.6.1.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/slider.js"></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="./images/tikv.png"></a>
+            </div>
+            <section class="container">
+                <div id="city" title="Если ваш город определен неправильно, нажмите для выбора правильного города">Ваш город: <span></span></div>
+            </section>
+            <section class="container">
+                <form class="search">
+                    <input type="text" placeholder="Искать здесь...">
+                    <button type="submit"></button>
+                </form>
+                <button class="LK">Личный кабинет</button>
+                <button class="korzina"><a href="order.html">Корзина</a></button>
+            </section>
+            <section class="container">
+                <nav class="topmenu">
+                    <a href="index.html"><span>Главная страница</span></a>
+                    <a href="catalog.html" class="current"><span>Каталог</span></a>
+                    <a href="product.html"><span>Товар</span></a>
+                    <!-- <a href="order.html"><span>Корзина</span></a> -->
+                    <a href="contacts.html"><span>Контакты</span></a>
+                </nav>
+            </section>
+        </header>
+        <div class="line"></div>
+        <main class="catalog">
+        
+            <section class="container">
+                <aside>
+                    
+                    <nav class="catmenu">
+                        <p>Каталог</p>
+                        <ul>
+                            <li>
+                                <a href="#"><span>Наиболее просматриваемое</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Картины маслом</span></a>
+                                
+                                <ul>
+                                    <li>
+                                        <a href="#"><span>Портрет-масло</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Пейзаж-масло</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Натюрморт-масло</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Картины углём</span></a>
+                                
+                                <ul>
+                                    <li>
+                                        <a href="#"><span>Портрет-уголь</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Пейзаж-уголь</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span>Натюрморт-уголь</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><span>Картины акрилом</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Комбинированные</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><span>Скетчи</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /catmenu -->
+                    <div class="filters">
+                        <p>Фильтры</p>
+                        <div class="checkbox">
+                            <input class="custom-checkbox" type="radio" id="punkt-1" name="punkt-1" value="big">
+                            <label for="punkt-1">Крупные картины</label>
+                        </div>
+
+                        <div class="checkbox">
+                            <input class="custom-checkbox" type="radio" id="punkt-2" name="punkt-1" value="small">
+                            <label for="punkt-2">Маленькие картины</label>
+                        </div>
+                        
+                        <div class="checkbox">
+                            <input class="custom-checkbox" type="radio" id="punkt-3" name="punkt-1" value="BaS">
+                            <label for="punkt-3">Большие и маленькие</label>
+                        </div>
+
+                        <div class="checkbox">
+                            <input class="custom-checkbox" type="checkbox" id="punkt-4" name="punkt-2" value="brown" disabled="disabled">
+                            <label for="punkt-4">Некачественные</label>
+                        </div>
+
+                        <div class="checkbox">
+                            <input class="custom-checkbox" type="checkbox" id="punkt-5" name="punkt-3" value="yellow">
+                            <label for="punkt-5">С рамкой</label>
+                        </div>
+                        
+                        <p>
+                            <label for="amount">Цена от:</label>
+                            <input type="text" id="amount1">
+                        
+                            <label for="amount">до:</label>
+                            <input type="text" id="amount2">
+                        </p>          
+                        <div id="slider-range"></div>
+                    </div>
+                </aside>
+                
+                <article>
+                    <div class="cat-item" onclick="location.assign('product.html')">
+                        <h4>Лот 1</h4>
+                        <img src="./images/big_z1Pald8H7PI.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>8000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 2</h4>
+                        <img src="./images/WXQOGkwnWqQ.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>9000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 3</h4>
+                        <img src="./images/QPPTrKKVngw.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>6500р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 4</h4>
+                        <img src="./images/Oc6fiaoMR-Y.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>3000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 5</h4>
+                        <img src="./images/nJ_Ijhu-ae8.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>10000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 6</h4>
+                        <img src="./images/big_NB5UDqxHZXg.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>6000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 7</h4>
+                        <img src="./images/N9EsI9r2Zcc.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>5000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 8</h4>
+                        <img src="./images/lyz64OP3NPY.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>6000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 9</h4>
+                        <img src="./images/6Kuf8Ek3zQU.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>6000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 10</h4>
+                        <img src="./images/big_HYU-Ylrfh-I.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>12000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 11</h4>
+                        <img src="./images/7C828B8G108.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>6000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 12</h4>
+                        <img src="./images/GYlgmz0JALI.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>2000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 13</h4>
+                        <img src="./images/DAMAs4xPGfQ.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>13000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 14</h4>
+                        <img src="./images/big_-bNb6duM0a8.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>10000р.</h4>
+                    </div>
+                    <div class="cat-item">
+                        <h4>Лот 15</h4>
+                        <img src="./images/aZRhkm0diGs.jpg">
+                        <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.</p>
+                        <h4>9000р.</h4>
+                    </div>
+                </article>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="wrap">
+                <div class="logo">
+                    <a href="index.html"><img src="./images/tikv.png"></a>
+                </div>
+                <div class="copyright">
+                    <p>
+                        Сайт авторской живописи © 2015-2023<br>
+                        <a href="contacts.html">AAVart@mail.ru</a>
+                    </p>
+                </div>
+                <ul class="footer-menu">
+                    <li><a>Подписаться на рассылку</a></li></li>
+                    <li><a>Стать спонсором</a></li>
+                    <li><a>Реквизиты</a></li>
+                </ul>
+                <ul class="footer-links">
+                    <li><a>Политика конфиденциальности</a></li>
+                    <li><a>Пользовательское соглашение</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
