@@ -225,7 +225,7 @@ footer {
     height: auto;
     top: 200px;
     padding: 40px;
-    z-index: 1;
+    z-index: 4;
     display: block;
 }
 .close {
@@ -860,6 +860,7 @@ footer .logo img {
 .order .icon {
     font-family: 'icomoon';
     cursor: pointer;
+    overflow: hidden;
 }
 .table tfoot th {
     border-bottom: none;
@@ -932,7 +933,10 @@ footer .logo img {
 .form-check-input:focus+label::before {
     width: 1em;
 }
-
+.mb-3 ::placeholder {
+    color: #1F3F68;
+    opacity: 0.5;
+}
 /*tabs на странице product*/
 
     .tabs {
@@ -1092,7 +1096,7 @@ form ::placeholder {
     box-shadow: 5px 10px 30px #ff4500;
     opacity: 0.6;
 }
-.form {
+.forma {
     width: 484px;
     height: 688px;
     background: #FFF;
@@ -1164,7 +1168,59 @@ form ::placeholder {
 }
 .dp_grid {
     display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    /* gap: 2px; */
+    margin: 2px;
+    border: 2px solid #ff4500;
+    border-radius: 8px;
     grid-template-columns: repeat(7, auto);
+}
+
+.dp_grid > span {
+    text-align: center;
+    padding: 2px;
+    border-radius: 8px;
+}
+.dp_grid > .headday {
+    background: #f5e391;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 2px solid #ff4500;
+    color: gray;
+}
+.dp_grid > .getter {
+    color: gray;
+}
+.dp_grid > .holiday {
+    color: red;
+}
+.dp_grid > .getter:hover {
+    background: #fbf4d5;
+    border: 1px solid #ff4500;
+}
+#calendar .prev, #calendar .next {
+    cursor: pointer;
+    background: #e6d6fb;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #ff4500;
+    color: blue;
+    margin: 0 8px;
+}
+#calendar .prev:after, #calendar .next:before {
+    content: 'месяц';
+    font-size: 14px;
+}
+#calendar .bigprev, #calendar .bignext {
+    cursor: pointer;
+    background: #e9ea85;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #ff4500;
+    color: green;
+    margin: 0 8px;
+}
+#calendar .bigprev:after, #calendar .bignext:before {
+    content: 'год';
+    font-size: 16px;
 }
 
 /* adaptive */
@@ -1183,7 +1239,7 @@ form ::placeholder {
     .logo img {
         margin-left: 100px;
     }
-    .form {
+    .forma {
         width: 484px;
         height: 688px;
     }
@@ -1261,7 +1317,7 @@ form ::placeholder {
         width: 780px;
     }
     /*contacts*/
-    .form {
+    .forma {
         width:412px;
         height: 676px;
         text-align: center;
@@ -1509,13 +1565,13 @@ form ::placeholder {
     .table .qty strong {
         min-width: 50px;
     }
-    .form {
+    .forma {
         width: 247px;
         height: 450px;
         text-align: center;
         padding: 36px;
     }
-    .form label {
+    .forma label {
         font-size: 14px;
         margin: 24px auto 23px;
 }

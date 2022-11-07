@@ -320,7 +320,7 @@ $(function(){
         $('.order form .submit').click(function(){
             $('.is-invalid').removeClass('is-invalid');
             $('.invalid-feedback').remove();
-            let form = document.forms[0];
+            let form = document.forms.mainform;
             let valid = true;
             if (!form.name.value) {
                 $('form #name').addClass('is-invalid').parents('.mb-3').append('<div class="invalid-feedback">Должно быть указано имя!</div>');
@@ -331,8 +331,13 @@ $(function(){
                 valid = false;
             }
             if (!form.phone.value.match(/^((\+7)|(8))?\s?\(?\d{3}\)?\s?\d{3}\-?\d{2}\-?\d{2}$/)) {
-                $('form #phone').addClass('is-invalid').parents('.mb-3').append('<div class="invalid-feedback">Должен быть указан телефон!</div>');
+                $('form #phone').addClass('is-invalid').parents('.mb-3').append('<div class="invalid-feedback">Должен быть указан телефон без пробелов или со скобками!</div>');
                 valid = false;
+            }
+            if (!form.agree.checked) {
+                $('form #agree') .addClass('is-invalid').parents('.mb-3').append('<div class="invalid-feedback">Необходимо согласие на обработку данных!</div>');
+                valid = false;
+                console.log('not checked');
             }
             if (valid) {
                 let products = [];
@@ -359,7 +364,7 @@ $(function(){
                         'Content-type': 'application/json; charset=UTF-8',
                     },
                 }).then((response) => response.json()).then(function(json){
-                    localStorage.removeItem('basket')
+                    localStorage.removeItem('basket');
                     getModalWindow('order');
                     $('.modal').append('<p>Ваш заказ оформлен под номером ' + json.id + '.</p>');
                     $('.order').addClass('empty');
