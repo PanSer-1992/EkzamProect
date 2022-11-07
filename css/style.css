@@ -339,7 +339,7 @@ footer {
     position: relative;
     transition: .3s linear;
 }
-input:focus {
+.search input:focus {
     width: 230px;
 }
 .search button {
