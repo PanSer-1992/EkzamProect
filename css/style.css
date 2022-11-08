@@ -213,7 +213,7 @@ footer {
     left: 0;
     right: 0;
     cursor: pointer;
-    z-index: 1;
+    z-index: 10;
 }
 .modal {
     background: white;
@@ -225,7 +225,7 @@ footer {
     height: auto;
     top: 200px;
     padding: 40px;
-    z-index: 4;
+    z-index: 10;
     display: block;
 }
 .close {
@@ -400,10 +400,14 @@ footer {
 }
 /* footer */
 .wrap {
-    width: 1080px;
+    width: auto;
     margin: 0 auto;
     position: relative;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+}
+.wrap > ul {
+    display: block;
+    justify-content: space-between;
 }
 footer .logo img {
     position: absolute;
@@ -505,7 +509,7 @@ footer .logo img {
 }
 .slider button {
     position: absolute;
-    border: 1px solid lightblue;
+    border: 1px solid yellow;
     height: 40px;
     width: 60px;
     border-radius: 8px;
@@ -519,9 +523,11 @@ footer .logo img {
 }
 .slider .to_left {
     left: 40px;
+    background: #FF6347;
 }
 .slider .to_right {
     right: 40px;
+    background: #FF6347;
 }
 .slider_points {
     position: absolute;
@@ -537,6 +543,7 @@ footer .logo img {
 .slider_points span {
 	flex: none;
     border-radius: 50%;
+    background: #FF6347;
 	border: 1px solid lightblue;
 	height: 22px;
 	width: 22px;
@@ -544,7 +551,7 @@ footer .logo img {
     opacity: 0;
 }
 .slider_points span.active {
-    background: lightblue;
+    background: yellow;
 }
 .slider_desk:hover ~ button,
 .slider button:hover,
@@ -574,12 +581,16 @@ footer .logo img {
 .catalog .container {
     display: flex;
     gap: 20px;
+    margin-top: 0;
+}
+.catalog article {
     margin-top: 10px;
 }
 .catalog aside {
     flex: 0 0 360px;
     background: url('../images/1630981404_22-papik-pro-p-solntse-risunok-akvarelyu-24.jpg') no-repeat;
-    background-size: cover;    /* */
+    background-size: cover;
+    border-right: 2px solid #ff4500;
     color: black;
 }
 .catmenu {
@@ -1204,7 +1215,7 @@ form ::placeholder {
     border-radius: 8px 8px 0 0;
     border: 1px solid #ff4500;
     color: blue;
-    margin: 0 8px;
+    margin: 0 4px;
 }
 #calendar .prev:after, #calendar .next:before {
     content: 'месяц';
@@ -1253,6 +1264,9 @@ form ::placeholder {
     main {
         /* flex: none; */
     }
+    .catalog aside {
+        flex: 0 0 300px;
+    }
     .container {
         width: auto;
         height: auto;
@@ -1263,7 +1277,7 @@ form ::placeholder {
         font-size: 25px;
     }
     .container p {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 16px;
     }
     .action .container {
@@ -1375,6 +1389,10 @@ form ::placeholder {
         left: 550px;
     }
     /*--*/
+    .container .catalog aside {
+        flex: 0 0 280px;
+        font-size: 16px;
+}
     .catalog article {
         display: flex;
         justify-content: center;
@@ -1387,7 +1405,11 @@ form ::placeholder {
         line-height: 30px;
     }
 }
-
+@media (max-width: 911px) {
+    .container aside {
+        flex: 0 0 260px
+    }
+}
 @media (max-width: 870px) {
     /*header*/
     header {
@@ -1419,12 +1441,40 @@ form ::placeholder {
     header .container {
         text-align: center;
     }
+
     /* .search { */
         /* float: left; */
     /* } */
+    .search {
+        width: auto;
+        margin-right: 0;
+    }
+    .search input {
+        width: 190px;
+        height: 32px;
+        padding-left: 15px;
+        font-size: 16px;
+    }
+    .search input:focus {
+        width: 200px;
+    }
     /* .LK { */
         /* float: left; */
     /* } */
+    /* .korzina { */
+        /* width: 30px; */
+        /* font-size: 0; */
+    /* } */
+    .korzina:before {
+        margin-left: 4px;
+    }
+    /* .LK { */
+        /* width: 30px; */
+        /* font-size: 0; */
+    /* } */
+    .LK:before {
+        margin-left: 9px;
+    }
     /* .korzina { */
         /* float: left; */
     /* } */
@@ -1481,9 +1531,9 @@ form ::placeholder {
     .wrap {
         display: flex;
         flex-direction: column;
-        width: 500px;
+        width: auto;
         height: 80px;
-        margin: 0;
+        margin-left: 15px;
         position: static;
     }
     .wrap .logo img {
@@ -1521,7 +1571,7 @@ form ::placeholder {
     /* catalog */
     .catalog aside {
         flex: 1 1 auto;
-        width: 250px;
+        width: 280px;
         font-size: 14px;
     }
     .filters label {
@@ -1606,5 +1656,120 @@ form ::placeholder {
         width: 500px;
         height: 349px;
         margin: 32px auto;
+    }
+}
+@media (max-width: 615px) {
+    /*footer*/
+    .wrap {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        height: 140px;
+    }
+    .wrap .logo {
+        margin: 0;
+        left: 120px;
+        width: 128px;
+        height: auto;
+    }
+    .wrap .logo img {
+        margin: 0;
+        width: 128px;
+        height: auto;
+    }
+    .logo > a {
+        width: 128px;
+        height: 100%;
+    }
+    .wrap > ul {
+        display: block;
+    }
+    .wrap > ul > li:hover{
+        text-decoration: underline;
+    }
+    .copyright {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+    footer .logo img {
+        position: absolute;
+        height: 85px;
+        margin-left: 80px;
+        opacity: 0.4;
+    }
+    .footer-menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0;
+        line-height: 18px;
+    }
+    .footer-links {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0;
+        line-height: 18px;
+    }
+    /*catalog*/
+    .container aside {
+        width: 250px;
+        border-right: 2px solid #ff4500;
+    }
+    .container article {
+        margin-top: 10px;
+    }
+    .catalog .container {
+        margin-top: 0;
+    }
+    .cat-item {
+        display: inline;
+        position: relative;
+        width: 260px;
+        height: 180px;
+        border-radius: 42px;
+        background: bottom / contain repeat url(../images/listik1.png);
+    }
+    .cat-item h4:first-of-type {
+        height: 30px;
+    }
+    .cat-item h4:last-of-type {
+        position: absolute;
+        bottom: 0;
+        margin-left: 118px;
+        
+    }
+    .cat-item p {
+        text-align: left;
+        margin: 0 10px 6px;
+    }
+    .cat-item img {
+        /* width: 160px; */
+        /* display: block; */
+        float: left;
+        margin: 0 10px;
+        height: 90px;
+    }
+    .bigimage {
+        width: 350px;
+        height: auto;
+        border: 2px solid #ff4500;
+        padding: 2px;
+    }
+    .bigimage img {
+        width: 100%;
+    }
+    .gallery {
+        position: relative;
+        width: 325px;
+        height: auto;
+    }
+    .gallery > div {
+        width: 325px;
+    }
+    .rail {
+        overflow-y: hidden;
     }
 }

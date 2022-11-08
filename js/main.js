@@ -89,6 +89,17 @@ function changeOrder(line, num){
         orderReCount();
     }
 }
+function filterPrices() {
+    let min_ = +$('#amount1').val();
+    let max_ = +$('#amount2').val();
+    $('.cat-item').each(function(){
+       if ((+$(this).html() > max_) || (+$(this).html() < min_)) {
+           $(this).addClass('hidden');
+       } else {
+           $(this).removeClass('hidden');
+       }
+    });
+}
 
 /* on ready */
 $(function(){
@@ -194,6 +205,7 @@ $(function(){
             slide: function(event, ui) {
                 $('#amount1').val(ui.values[0]);
                 $('#amount2').val(ui.values[1]);
+                filterPrices();
             }
         });
         $('#amount1').on('change', function() {
@@ -210,6 +222,7 @@ $(function(){
                 $('#amount2').val(v2);
             }
             $('#slider-range').slider('values', [v1, v2]);
+            filterPrices();
         });
         $('#amount2').on('change', function() {
             let v1 = +$('#amount1').val();
@@ -225,6 +238,7 @@ $(function(){
                 $('#amount1').val(v1);
             }
             $('#slider-range').slider('values', [v1, v2]);
+            filterPrices();
         });
         $('#amount1').val(rangemin);
         $('#amount2').val(rangemax);
@@ -250,6 +264,7 @@ $(function(){
     }
     
     $('.btn-buy').click(function(){
+        // здесь можно поднять модалку с сообщением, что товар добавлен в корзину
         let res = {}
         let aim = $(this).parents('.product');
         res.id = aim.data('product-id');
